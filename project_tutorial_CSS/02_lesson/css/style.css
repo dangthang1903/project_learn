@@ -1,0 +1,25 @@
+body {
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1,
+h2 {
+    color: blue;
+}
+
+p {
+    color: purple!important;
+}
+
+.gray {
+    color: gray;
+}
+
+.highlight {
+    background-color: aqua;
+}
+
+#second {
+    font-style: italic;
+}
