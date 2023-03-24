@@ -1,0 +1,47 @@
+@use '../util' as u;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    // max-width: 1000px;
+    width: min(100%, 1000px);
+    margin: 0 auto 0 auto;
+    // margin-inline: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include u.breakpoint(large) {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+    }
+    @media (max-width: 899px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &__main,
+    &__sidebar {
+        padding: 40px;
+    }
+    &__main {
+        background-color: blue;
+        @include u.breakpoint(medium) {
+            background-color: green;
+        }
+        @include u.breakpoint(large) {
+            background-color: orange;
+        }
+    }
+    &__sidebar {
+        background-color: magenta;
+        // text-align: center;
+        // @include u.breakpoint(large) {
+        //     text-align: left;
+        // }
+        // @media (max-width: 56.25em) {
+        //     text-align: center;
+        // }
+        @include u.breakpoint-down(medium) {
+            text-align: center;
+        }
+    }
+}
